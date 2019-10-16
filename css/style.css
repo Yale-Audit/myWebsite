@@ -184,23 +184,20 @@ a:hover {
 /* ...Hero image text start... */
 
 .herotext {
-  position: absolute;
-  top: 66%;
-  left: 26%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: -20%;
+  left: 5%;
+  /* transform: translate(-50%, -50%); */
   font-size: xx-large;
   font-family: sans-serif;
   color: #EFEFEF;
-  display: flex;
-  flex: auto;
-  justify-content: flex-start;
-  align-items: flex-end;
+  text-align: unset;
 }
 
-.row .column {
+/* .row .column {
   text-align: center;
   color: rgb(0, 0, 0);
-}
+} */
 
 /* ...Hero image text end...  */
 
@@ -269,16 +266,17 @@ a:hover {
   padding: 2%;
 }
 
-/*when the screen gets to a certain size, change the layout with css*/
-@media screen and (min-width: 600px) {
-  #hero {
-    min-height: 500px;
-    background: azure;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.column {
+  display: flex;
+  /* align-items: center;
+    justify-content: center;*/
+  flex-direction: column;
 }
+
+
+
+
+
 
 h2 {
   font-size: 24px;
@@ -292,11 +290,17 @@ p {
   margin-bottom: 20px;
 }
 
-.column {
-  display: flex;
-  /* align-items: center;
-    justify-content: center;*/
-  flex-direction: column;
+.programname {
+  justify-content: space-around;
+  align-items: center;
+  font-size: 15px;
+}
+
+
+.social {
+  justify-content: space-around;
+  flex-direction: row;
+
 }
 
 .circle {
@@ -472,6 +476,19 @@ body {
 
 /* ...Search bar ends... */
 
+
+/*when the screen gets to a certain size, change the layout with css*/
+@media screen and (min-width: 600px) {
+  #hero {
+    min-height: 500px;
+    background: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
 @media screen and (max-width: 600px) {
 
   .topnav a:not(:first-child),
@@ -524,7 +541,8 @@ body {
 
   .herotext {
     font-size: 20px;
-    left: 50%;
-
+    left: 5%;
+    top: -30px;
+    position: relative;
   }
 }
